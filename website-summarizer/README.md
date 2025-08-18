@@ -37,6 +37,7 @@ pip install -r requirements.txt
 
    ```bash
    echo "OPENAI_API_KEY=sk-proj-xxxxxxx" > .env
+   echo "HUGGINGFACE_API_KEY=hf_xxxxxxxxxxxxx" >> .env
    ```
 
    Replace `sk-proj-xxxxxxx` with your actual OpenAI API key.
