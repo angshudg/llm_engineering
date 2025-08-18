@@ -1,4 +1,4 @@
-# Website Summarizer using OpenAI
+# Website Summarizer
 
 A simple Python tool that scrapes a website, extracts meaningful text, and generates a **short AI-powered summary** in Markdown format.  
 
