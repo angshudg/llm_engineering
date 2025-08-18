@@ -126,4 +126,4 @@ python summarize_website.py https://<provide-url-here>/
 * **dotenv** (environment variables)
 * **OpenAI API** (text summarization)
 
-```
+---
