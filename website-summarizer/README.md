@@ -1,4 +1,4 @@
-# 🌐 Website Summarizer using OpenAI
+# Website Summarizer using OpenAI
 
 A simple Python tool that scrapes a website, extracts meaningful text, and generates a **short AI-powered summary** in Markdown format.  
 
@@ -10,7 +10,7 @@ This project demonstrates:
 
 ---
 
-## 🚀 Features
+## Features
 - Takes any website URL as input
 - Cleans out unnecessary HTML elements ('script', 'style', 'img', 'input')
 - Extracts title & textual content
@@ -19,7 +19,7 @@ This project demonstrates:
 
 ---
 
-## 🛠️ Installation
+## Installation
 
 Clone the repo and install dependencies:
 
@@ -31,7 +31,7 @@ pip install -r requirements.txt
 
 ---
 
-## 🔑 Setup
+## Setup
 
 1. Create a `.env` file in the project root:
 
@@ -49,7 +49,7 @@ pip install -r requirements.txt
 
 ---
 
-## ▶️ Usage
+## Usage
 
 Run the script with a website URL:
 
@@ -59,7 +59,7 @@ python summarize_website.py https://<provide-url-here>/
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 .
@@ -71,7 +71,7 @@ python summarize_website.py https://<provide-url-here>/
 
 ---
 
-## 📌 Example Use Cases
+## Example Use Cases
 
 * Summarize **news sites** into quick bullet points
 * Extract **announcements** from corporate pages
@@ -80,7 +80,7 @@ python summarize_website.py https://<provide-url-here>/
 
 ---
 
-## ⚡ Tech Stack
+## Tech Stack
 
 * **Python 3.9+**
 * **Requests** (HTTP requests)
