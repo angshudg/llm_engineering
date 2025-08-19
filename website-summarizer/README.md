@@ -1,4 +1,3 @@
-````markdown
 # Website Summarizer Tool
 
 This project provides a simple web app to summarize any website using **OpenAI** or **Hugging Face** models. The app is built with **Streamlit** and can be run locally or deployed on **Streamlit Cloud**.
