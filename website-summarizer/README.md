@@ -1,91 +1,69 @@
-# Website Summarizer
+````markdown
+# Website Summarizer Tool
 
-A simple Python tool that scrapes a website, extracts meaningful text, and generates a **short AI-powered summary** in Markdown format.  
-
-This project demonstrates:
-- Web scraping with **BeautifulSoup**
-- API integration with **OpenAI GPT models**
-- Environment variable handling with **dotenv**
-- Command-line interface for flexible usage
-
----
+This project provides a simple web app to summarize any website using **OpenAI** or **Hugging Face** models. The app is built with **Streamlit** and can be run locally or deployed on **Streamlit Cloud**.
+<img width="1919" height="991" alt="image" src="https://github.com/user-attachments/assets/ebc25d92-6343-4803-af82-3cba2dd0fe19" />
 
 ## Features
-- Takes any website URL as input
-- Cleans out unnecessary HTML elements ('script', 'style', 'img', 'input')
-- Extracts title & textual content
-- Generates a short **natural language summary** using OpenAI GPT
-- Outputs clean Markdown for easy reading
+- Enter your own API keys (OpenAI or Hugging Face) securely in the sidebar.
+- Input a website URL.
+- Choose the summarization backend:
+  - OpenAI (`gpt-5-nano`)
+  - Hugging Face (`facebook/bart-large-cnn`)
+- Get a clean summary in markdown format.
 
----
+## Running Locally
 
-## Installation
-
-Clone the repo and install dependencies:
-
-```bash
-git clone https://github.com/angshudg/website-summarizer.git
-cd website-summarizer
-pip install -r requirements.txt
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/angshudg/llm_engineering.git
+   cd llm_engineering/website-summarizer
 ```
 
----
-
-## Setup
-
-1. Create a `.env` file in the project root:
+2. Install dependencies:
 
    ```bash
-   echo "OPENAI_API_KEY=sk-proj-xxxxxxx" > .env
-   echo "HUGGINGFACE_API_KEY=hf_xxxxxxxxxxxxx" >> .env
+   pip install -r requirements.txt
    ```
 
-   Replace `sk-proj-xxxxxxx` with your actual OpenAI API key.
-
-2. Verify that dependencies are installed:
+3. Start the Streamlit app:
 
    ```bash
-   pip list
+   streamlit run app.py
    ```
 
----
+4. Open the URL shown in the terminal (usually `http://localhost:8501`) in your browser.
 
-## Usage
+5. Enter your API keys in the sidebar, provide a website URL, choose the model, and click Submit to generate a summary.
 
-Run the script with a website URL:
+## Deploying on Streamlit Cloud
 
-```bash
-python summarize_website.py https://<provide-url-here>/
-```
+1. Push your code to a GitHub repository.
 
----
+   Example repo structure:
 
-## Project Structure
+   ```
+   llm_engineering/
+   ├── website-summarizer/
+   │   ├── app.py
+   │   ├── requirements.txt
+   │   └── README.md
+   ```
 
-```
-.
-├── summarize_website.py   # Main script with CLI
-├── requirements.txt       # Dependencies
-├── .env                   # API key (not committed to Git)
-└── README.md              # Documentation
-```
+2. Go to [https://streamlit.io/cloud](https://streamlit.io/cloud) and log in with your GitHub account.
 
----
+3. Click "New app" and fill in the fields:
 
-## Example Use Cases
+   * **Repository:** `your-username/llm_engineering`
+   * **Branch:** `main`
+   * **Main file path:** `website-summarizer/app.py`
 
-* Summarize **news sites** into quick bullet points
-* Extract **announcements** from corporate pages
-* Turn **blogs** into concise overviews
-* Crawl research portals for **study notes**
+4. Deploy the app. Streamlit will build it automatically and provide a public URL.
 
----
+5. Open the app in your browser, enter your API keys, and start summarizing websites.
 
-## Tech Stack
+## Notes
 
-* **Python 3.9+**
-* **Requests** (HTTP requests)
-* **BeautifulSoup** (web scraping)
-* **dotenv** (environment variables)
-* **OpenAI API** (text summarization)
-
+* Each user must provide their own API keys through the sidebar. They are not stored in the app.
+* Streamlit Cloud free accounts have limits (around 1 GB RAM, 1 GB storage, and 3 apps per account). This app runs well within those limits.
+* For production use or persistent API keys, Streamlit Secrets Manager can be configured, but for this project, users are expected to enter their own keys.
