@@ -17,7 +17,7 @@ This project provides a simple web app to summarize any website using **OpenAI**
    ```bash
    git clone https://github.com/angshudg/llm_engineering.git
    cd llm_engineering/website-summarizer
-```
+   ```
 
 2. Install dependencies:
 
