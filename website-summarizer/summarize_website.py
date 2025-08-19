@@ -17,7 +17,7 @@ elif not api_key.startswith("sk-proj-") or api_key.strip() != api_key:
     print("❌ API key corrupted. Please check formatting.")
     sys.exit(1)
 else:
-    print("✅ API key loaded successfully.")
+    print("API key loaded successfully.")
     openai = OpenAI()
 
 if not hf_token:
@@ -116,11 +116,13 @@ def main():
         summary = summarize_openai(url)
         print("\n=== Website Summary (OpenAI) ===\n")
         print(summary)
+        print("\n=== OpenAI Over ===\n")
         summary = summarize_hface(url)
         print("\n=== Website Summary (HuggingFace) ===\n")
         print(summary)
+        print("\n=== HuggingFace Summary Over ===\n")
     except Exception as e:
-        print(f"❌ Error: {e}")
+        print(f"Error: {e}")
 
 if __name__ == "__main__":
     main()
